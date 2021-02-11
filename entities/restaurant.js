@@ -1,13 +1,10 @@
 const uuid = require('uuid');
-const Mongo = require('../db/index');
+const { RestaurantsDAO } = require('../DAO');
 
 class Restaurant {
-    constructor() {
-        this.restaurants = new Mongo('restaurants');
-    }
     
     list() {
-        return this.restaurants.fetchAll(10);
+        return RestaurantsDAO.fetchAll(10);
     }
 
     async create(restaurant) {
@@ -27,12 +24,12 @@ class Restaurant {
         return restaurantID;
     }
 
-    async get(restaurantID) {
-        return this.restaurants.fetchOne({ restaurant_id: restaurantID });
+    get(restaurantID) {
+        return RestaurantsDAO.fetchOne({ restaurant_id: restaurantID });
     }
 
     async update(restaurant) {
-        const item = await this.restaurants.fetchOne({ restaurant_id: restaurant.restaurant_id });
+        const item = await RestaurantsDAO.fetchOne({ restaurant_id: restaurant.restaurant_id });
         if (!item) {
             return false;
         }
@@ -45,11 +42,11 @@ class Restaurant {
             updated_at: new Date().getTime()
         }};
 
-        return this.restaurants.updateOne(filter, query);
+        return RestaurantsDAO.updateOne(filter, query);
     }
 
-    async remove(restaurantID) {
-        return this.restaurants.removeOne({ restaurant_id: restaurantID });
+    remove(restaurantID) {
+        return RestaurantsDAO.removeOne({ restaurant_id: restaurantID });
     }
 }
 
