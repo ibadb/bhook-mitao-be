@@ -11,7 +11,7 @@ class Restaurant {
         const restaurantID = uuid.v4();
         const crrTime = new Date().getTime();
         
-        await this.restaurants.insertOne({
+        await RestaurantsDAO.insertOne({
             restaurant_id: restaurantID,
             name: restaurant.name,
             borough: restaurant.borough,

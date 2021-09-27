@@ -10,4 +10,4 @@ module.exports = () => {
             connection: 'mongodb+srv://django:lAE2H1nLYw0ItvLs@cluster0.c7xew.mongodb.net/sample_restaurants?retryWrites=true'
         }
     }
-};
+}; //connection: 'mongodb://localhost:27017/sample_restaurants'
