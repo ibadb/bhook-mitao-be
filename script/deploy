@@ -10,8 +10,6 @@ ssh ec2-user@ec2-18-222-231-126.us-east-2.compute.amazonaws.com <<EOF
 
     . ~/.nvm/nvm.sh
     
-    nvm install v10.11.0
-    
     npm install
     
     npm install -g nodemon pm2
