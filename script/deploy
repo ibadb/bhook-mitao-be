@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ssh -t ec2-user@ec2-18-222-231-126.us-east-2.compute.amazonaws.com <<EOF
+ssh ec2-user@ec2-18-222-231-126.us-east-2.compute.amazonaws.com <<EOF
 
     cd ~/bhook-mitao-be
     
