@@ -8,7 +8,7 @@ const { restaurants } = require('./routes/index');
 
 const app = express();
 
-// view engine setup
+// view engine setup jade
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
