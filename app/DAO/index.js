@@ -1,0 +1,1 @@
+module.exports.RestaurantsDAO = require('./restaurantsDAO');
