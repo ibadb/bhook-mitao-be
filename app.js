@@ -25,7 +25,7 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
-// error handler # IT IS QA BRANCH
+// error handler # IT IS MAIN BRANCH + LATEST MAIN
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
